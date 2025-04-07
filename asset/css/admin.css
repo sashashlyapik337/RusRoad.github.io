@@ -1,0 +1,410 @@
+/* Цветовая палитра */
+:root {
+	--primary-color: #ff0000;
+	--secondary-color: #ebebe8;
+	--background-color: #ffffff;
+	--text-color: #333333;
+	--border-color: #dddddd;
+}
+
+/* Сброс стилей */
+*,
+*::before,
+*::after {
+	padding: 0;
+	margin: 0;
+	border: 0;
+	box-sizing: border-box;
+}
+
+a {
+	text-decoration: none;
+}
+
+ul,
+ol,
+li {
+	list-style: none;
+}
+
+img {
+	vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: inherit;
+	font-size: inherit;
+}
+
+html,
+body {
+	height: 100%;
+	line-height: 1;
+	font-size: 24px;
+	font-family: 'Inter', serif;
+	display: flex;
+	justify-content: center;
+}
+.wrapper {
+	min-height: 100%;
+	display: flex;
+	flex-direction: column;
+	width: 1150px;
+}
+
+.main {
+	flex: 1 1 auto;
+}
+/* Контейнер страницы */
+.posts-admin-container {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+
+.posts-admin-content {
+	display: flex;
+	flex: 1;
+	gap: 20px;
+	padding: 20px;
+	justify-content: center; /* Центрирует содержимое */
+}
+
+.posts-management {
+	flex: 1;
+	max-width: 1200px; /* Максимальная ширина для блока */
+	background-color: var(--secondary-color);
+	padding: 20px;
+	border-radius: 10px;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	margin: 20px 0px;
+}
+
+.topic-item-blog a {
+	background-color: #ebebe8;
+	width: 200px;
+	border-radius: 10px;
+	text-align: center;
+}
+.topic-item-blog a {
+	color: #000000;
+}
+
+/* Заголовок (старый стиль) */
+.header {
+	background-color: #4a4a4a;
+	height: 88px;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 100px;
+	font-weight: 700;
+}
+
+.img-logo {
+	width: 456px;
+	height: 89px;
+}
+
+.header_wrapper {
+	display: flex;
+	gap: 20px;
+}
+
+.header_ul {
+	display: flex;
+	gap: 100px;
+	align-items: center;
+}
+
+.header-link a {
+	color: #ebebe8;
+}
+
+.header-link ul {
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+	margin-top: 10px;
+}
+
+.active {
+	text-decoration: underline;
+	font-weight: bold;
+	color: #333;
+}
+
+.header-link a {
+	position: relative;
+	text-decoration: none;
+	color: #ffffff;
+}
+
+.header-link a.active::after {
+	content: '';
+	position: absolute;
+	bottom: -5px;
+	left: 0;
+	width: 100%;
+	height: 3px;
+	background-color: #ff0000;
+}
+
+.auth-item {
+	color: #ff0000;
+}
+
+/* Приборная панель */
+.sidebar ul {
+	list-style: none;
+	display: flex;
+	flex-direction: row;
+	gap: 20px;
+	margin: 20px;
+}
+
+.sidebar ul li a {
+	color: var(--text-color);
+	text-decoration: none;
+	padding: 10px;
+	border-radius: 5px;
+	transition: background-color 0.3s;
+}
+
+.sidebar ul li a:hover {
+	background-color: var(--primary-color);
+	color: var(--background-color);
+}
+
+/* Секция управления постами */
+.posts-actions {
+	display: flex;
+	gap: 10px;
+}
+
+.posts-btn {
+	padding: 10px 20px;
+	background-color: var(--primary-color);
+	color: var(--background-color);
+	text-decoration: none;
+	border-radius: 5px;
+	text-align: center;
+	transition: background-color 0.3s;
+}
+
+.posts-btn:hover {
+	background-color: #d90000;
+}
+
+.posts-title {
+	text-align: center;
+	padding: 20px;
+	font-size: 34px;
+}
+
+/* Таблица постов */
+.posts-table {
+	display: flex;
+	flex-direction: column;
+	border: 1px solid var(--border-color);
+	border-radius: 10px;
+	overflow: hidden;
+}
+
+.posts-table-row {
+	display: flex;
+	padding: 10px 20px;
+	background-color: var(--background-color);
+	align-items: center;
+}
+
+.posts-table-header {
+	padding: 10px 20px;
+	background-color: var(--secondary-color);
+	font-weight: bold;
+	display: flex;
+	gap: 675px;
+	border-bottom: 1px solid var(--border-color);
+}
+
+.posts-table-row {
+	border-bottom: 1px solid var(--border-color);
+}
+
+.posts-table-row:last-child {
+	border-bottom: none;
+}
+
+.posts-table-row span {
+	flex: 1;
+}
+
+.posts-row-actions {
+	display: flex;
+	gap: 10px;
+}
+
+.posts-link {
+	color: var(--primary-color);
+	text-decoration: none;
+	padding: 5px 10px;
+	border: 1px solid var(--primary-color);
+	border-radius: 5px;
+	transition: all 0.3s;
+}
+
+.posts-link:hover {
+	background-color: var(--primary-color);
+	color: var(--background-color);
+}
+
+/* Сообщение об ошибке */
+.posts-error {
+	color: #ff0000;
+	padding: 10px;
+	border-radius: 5px;
+	text-align: center;
+}
+
+/* Футер (старый стиль) */
+.footer {
+	background-color: #656565;
+	color: #ffffff;
+	text-align: center;
+	padding: 20px;
+}
+.foot-ul {
+	display: flex;
+	margin-top: 40px;
+	gap: 208px;
+}
+.foot-li {
+	display: flex;
+	flex-direction: column;
+	align-items: start;
+}
+.contact {
+	margin-top: 40px;
+	display: flex;
+	flex-direction: column;
+	align-items: start;
+	gap: 10px;
+}
+.social {
+	margin-top: 10px;
+	display: flex;
+	flex-direction: column;
+	align-items: start;
+	gap: 20px;
+}
+.social-li {
+	display: flex;
+	gap: 20px;
+}
+.author {
+	margin-top: 40px;
+}
+
+/* /posts/create.php */
+/* Main Block Styling */
+main {
+	display: flex;
+	flex-direction: column;
+	flex: 1;
+	gap: 30px;
+	padding: 30px;
+	background-color: #ebebe8;
+	border-radius: 10px;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Post Management Section */
+.posts-management {
+	flex: 1;
+	background-color: #ffffff;
+	padding: 30px;
+	border-radius: 10px;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+/* Section Title */
+.posts-title {
+	font-weight: bold;
+	color: #000000;
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+/* Error Message Styling */
+.posts-error {
+	color: #ff0000;
+	border-radius: 5px;
+	text-align: center;
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+
+/* Form Styling */
+.posts-form form {
+	display: flex;
+	flex-direction: column;
+	gap: 30px;
+}
+
+.posts-form .form-group {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+
+.posts-form label {
+	font-weight: bold;
+	color: #333333;
+}
+
+.posts-form input[type='text'],
+.posts-form textarea,
+.posts-form select,
+.posts-form input[type='file'] {
+	width: 100%;
+	padding: 12px;
+	border: 1px solid #dddddd;
+	border-radius: 5px;
+	font-size: 16px;
+	background-color: #f9f9f9;
+}
+
+.posts-form textarea {
+	resize: none;
+	height: 150px;
+}
+
+.posts-form .form-check {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+
+.posts-form .btn {
+	padding: 12px 20px;
+	background-color: #ff0000;
+	color: #ffffff;
+	border: none;
+	border-radius: 5px;
+	font-size: 16px;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+}
+
+.posts-form .btn:hover {
+	background-color: #d90000;
+}

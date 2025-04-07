@@ -1,0 +1,522 @@
+*,
+*::before,
+*::after {
+	padding: 0;
+	margin: 0;
+	border: 0;
+	box-sizing: border-box;
+}
+
+a {
+	text-decoration: none;
+}
+
+ul,
+ol,
+li {
+	list-style: none;
+}
+
+img {
+	vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: inherit;
+	font-size: inherit;
+}
+
+html,
+body {
+	height: 100%;
+	line-height: 1;
+	font-size: 24px;
+	background-color: #ffffff;
+	color: #fff;
+	font-family: 'Inter', serif;
+	display: flex;
+	justify-content: center;
+}
+
+.wrapper {
+	min-height: 100%;
+	display: flex;
+	flex-direction: column;
+	width: 1150px;
+}
+
+/* ХЕДЕР \|/ */
+.header {
+	background-color: #4a4a4a;
+	height: 88px;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 100px;
+	font-weight: 700;
+}
+.img-logo {
+	width: 456px;
+	height: 89px;
+}
+
+.header_ul {
+	display: flex;
+	gap: 100px;
+
+	align-items: center;
+}
+
+.header-link a {
+	color: #ebebe8;
+}
+.header-link ul {
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+	margin-top: 10px;
+}
+
+.active {
+	text-decoration: underline;
+	font-weight: bold;
+	color: #333;
+}
+.header-link a {
+	position: relative;
+	text-decoration: none;
+	color: #ffffff;
+}
+
+.header-link a.active::after {
+	content: '';
+	position: absolute;
+	bottom: -5px;
+	left: 0;
+	width: 100%;
+	height: 3px;
+	background-color: #ff0000;
+}
+
+.auth-item {
+	color: #ff0000;
+}
+
+.main {
+	flex: 1 1 auto;
+}
+.prezent-img {
+	width: 671px;
+	height: 414px;
+}
+.prezent-block {
+	height: 502px;
+	background: #fff;
+	min-width: 100%;
+	display: flex;
+	color: #000000;
+	justify-content: center;
+	align-items: center;
+}
+.prezent-title {
+	width: 437px;
+	height: 400px;
+	background: #e2e0d7;
+	padding: 20px;
+	line-height: 1.2;
+	font-weight: 400;
+	margin-top: -15px;
+	box-shadow: 3px 3px 10px 0px #5e5d5d;
+}
+.prezent-text {
+	width: 400px;
+}
+/* ХЕДЕР /|\ */
+
+/* МЕЙН INDEX */
+.topic-stat {
+	color: #000000;
+	background-color: #ebebe8;
+	padding: 50px 0;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+}
+.topic-title {
+	display: flex;
+	align-items: center; /* Центрирование элементов по вертикали */
+	justify-content: center; /* Центрирование текста и линий по горизонтали */
+	position: relative;
+	font-size: 24px;
+	font-weight: normal;
+	color: #4e4e4e; /* Цвет текста */
+	margin: 30px 0; /* Отступы сверху и снизу */
+}
+
+.topic-title .line {
+	flex: 1; /* Линии занимают всю доступную ширину */
+	height: 1px; /* Толщина линии */
+	background-color: #4e4e4e; /* Цвет линии */
+	margin: 0 10px; /* Отступы между линиями и текстом */
+}
+
+.topic-title span {
+	white-space: nowrap; /* Гарантия, что текст не переносится */
+	font-size: 24px; /* Размер текста */
+}
+
+.topic-list {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 70px;
+	padding: 10px;
+	justify-content: center;
+}
+
+.topic-item {
+	display: flex;
+	flex-direction: column;
+}
+.topic-img {
+	width: 500px;
+	height: 270px;
+	border-radius: 10px;
+	box-shadow: 3px 3px 10px 0px #5e5d5d;
+	margin-bottom: 20px;
+}
+.topic-text {
+	width: 500px;
+	color: #000000;
+	font-weight: 400;
+}
+.topic-plus {
+	color: #8d8c8c;
+	text-align: center;
+	margin-top: 30px;
+}
+
+/* МЕЙН INDEX */
+
+.footer {
+	background-color: #656565;
+	color: #ffffff;
+	text-align: center;
+	padding: 20px;
+}
+.foot-ul {
+	display: flex;
+	margin-top: 40px;
+	gap: 208px;
+}
+.foot-li {
+	display: flex;
+	flex-direction: column;
+	align-items: start;
+}
+.contact {
+	margin-top: 40px;
+	display: flex;
+	flex-direction: column;
+	align-items: start;
+	gap: 10px;
+}
+.social {
+	margin-top: 10px;
+	display: flex;
+	flex-direction: column;
+	align-items: start;
+	gap: 20px;
+}
+.social-li {
+	display: flex;
+	gap: 20px;
+}
+.author {
+	margin-top: 40px;
+}
+
+/* Стили reg.php */
+.reg_form {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #ebebe8;
+
+	width: 100%;
+	height: 100%;
+
+	margin: 40px 0px;
+}
+
+.reg_form_action h2 {
+	margin-bottom: 20px;
+	font-size: 36px;
+	color: #000000;
+}
+
+.reg_form_action {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+
+	width: 548px;
+	height: 468px;
+
+	border: #000000 solid 1px;
+	border-radius: 20px;
+	padding: 10px;
+}
+
+.label {
+	width: 200px;
+	color: #000000;
+}
+
+.form-label {
+	margin: 1px;
+}
+
+.form-control {
+	width: 460px;
+	height: 60px;
+	border: #000000 solid 1px;
+	border-radius: 20px;
+	font-size: 24px;
+	background-color: #ebebe8;
+	padding-left: 20px;
+
+	display: flex;
+	align-items: center;
+}
+
+.btn-auth {
+	border-radius: 20px;
+	font-size: 24px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #ff0000;
+	border: #000000 solid 1px;
+	width: 400px;
+	height: 60px;
+	color: #fff;
+	cursor: pointer;
+}
+.err {
+	color: #000000;
+}
+
+/* START blog.php */
+
+.topics-wrap ul {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 40px;
+	margin: 40px;
+}
+.topic-item-blog {
+	background-color: #ebebe8;
+	padding: 10px;
+	border-radius: 10px;
+}
+.topic-item-blog a {
+	color: #000000;
+}
+/* END blog.php */
+
+/* single.php */
+.main-content {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 40px;
+	margin-top: 40px;
+}
+
+.single_post {
+	display: flex;
+	flex-direction: column;
+	gap: 40px;
+	width: 100%;
+	max-width: 1150px;
+	margin: 0 auto;
+}
+
+/* Заголовок */
+.comment-title {
+	text-align: center;
+	font-size: 36px;
+	font-weight: bold;
+	color: #000000;
+	margin-bottom: 20px;
+}
+
+/* Стили для картинки */
+.single_post .img {
+	display: flex;
+	justify-content: center;
+}
+
+.single_post .img img {
+	width: 70%;
+	border-radius: 10px;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+	object-fit: cover;
+}
+
+/* Текст статьи */
+.single_post_text {
+	font-size: 18px;
+	color: #000000;
+	line-height: 1.8;
+	padding: 20px;
+	background-color: #ebebe8;
+	border-radius: 10px;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Форма комментария */
+/* Форма комментариев */
+.comments {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	background-color: #ffffff;
+	padding: 20px;
+	border-radius: 10px;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+	max-width: 1150px;
+	width: 100%; /* Форма теперь будет занимать всю ширину родительского блока */
+	margin: 40px auto;
+}
+.comments h3 {
+	color: #555555;
+	padding: 20px;
+	margin-bottom: 20px;
+}
+.form-email,
+.form-comment {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	width: 100%; /* Обеспечивает, чтобы форма и текстовые поля были на всю ширину */
+}
+
+.form-label {
+	font-size: 18px;
+	color: #000000;
+	width: 300px;
+}
+
+.form-control {
+	padding: 12px;
+	font-size: 16px;
+	color: #000000;
+	background-color: #ebebe8;
+	border: 1px solid #ebebe8;
+	border-radius: 10px;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+	width: 100%; /* Форма и поля теперь занимают всю доступную ширину */
+}
+
+.form-control:focus {
+	outline: none;
+	border-color: #ff0000;
+	box-shadow: 0 0 5px rgba(255, 0, 0, 0.5);
+}
+
+textarea.form-control {
+	resize: vertical;
+	height: 150px; /* Увеличиваем высоту текстового поля */
+}
+
+/* Форма отправки комментария */
+.form-submit {
+	display: flex;
+	justify-content: center;
+	margin: 20px;
+}
+
+.btn-primary {
+	background-color: #ff0000;
+	color: #ffffff;
+	border: none;
+	padding: 15px 40px;
+	font-size: 18px;
+	border-radius: 30px;
+	cursor: pointer;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+	transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+	background-color: #e60000;
+}
+
+.all-comments {
+	margin-top: 40px;
+}
+
+.one-comment {
+	background-color: #f9f9f9;
+	color: #555555;
+	padding: 20px;
+	border-radius: 10px;
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+	margin-bottom: 20px;
+}
+
+.one-comment span {
+	display: block;
+	font-size: 14px;
+	color: #555555;
+	margin-bottom: 10px;
+}
+
+.text-comment-one {
+	font-size: 16px;
+	color: #000000;
+	line-height: 1.6;
+}
+
+/* УНИКАЛЬНАЯ СТИЛИЗАЦИЯ ФОРМЫ */
+.reg_form_action {
+	width: 600px;
+	padding: 40px;
+	border-radius: 20px;
+	background-color: #ffffff;
+	margin: 40px auto;
+}
+
+.reg_form_action h2 {
+	text-align: center;
+	font-size: 36px;
+	color: #000000;
+	margin-bottom: 20px;
+}
+
+.reg_form_action .form-control {
+	margin-bottom: 20px;
+}
+
+.reg_form_action .btn-auth {
+	width: 100%;
+	padding: 15px;
+	font-size: 24px;
+	color: #ffffff;
+	background-color: #ff0000;
+	border: none;
+	border-radius: 20px;
+	cursor: pointer;
+}
+
+.reg_form_action .btn-auth:hover {
+	background-color: #e60000;
+}
